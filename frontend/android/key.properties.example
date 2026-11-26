@@ -1,0 +1,4 @@
+storeFile=/absolute/path/to/xsmb-upload-keystore.jks
+storePassword=CHANGE_ME
+keyAlias=xsmb-upload
+keyPassword=CHANGE_ME

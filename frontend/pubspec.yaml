@@ -1,0 +1,38 @@
+name: xsmb
+description: "Tra cứu kết quả và dò vé xổ số truyền thống miền Bắc."
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: ^3.10.3
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  http: ^1.2.0
+  intl: ^0.20.2
+  share_plus: ^10.0.0
+  path_provider: ^2.1.0
+  screenshot: ^3.0.0
+  shared_preferences: ^2.3.0
+  url_launcher: ^6.3.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/xsmb_logo.png
+flutter_launcher_icons:
+  android: launcher_icon
+  ios: true
+  image_path: assets/images/xsmb_logo.png
+  remove_alpha_ios: true
+  min_sdk_android: 24
+  web:
+    generate: true
+    image_path: assets/images/xsmb_logo.png
+    background_color: "#ffffff"
+    theme_color: "#F01101"

@@ -1,0 +1,18 @@
+# Local secrets and caches
+.env
+.env.*
+!.env.example
+**/node_modules/
+**/.dart_tool/
+**/build/
+**/.flutter-plugins*
+**/android/.gradle/
+**/android/.kotlin/
+**/android/local.properties
+**/android/key.properties
+**/*.jks
+**/*.keystore
+.cache/
+.DS_Store
+*.log
+/dist/
