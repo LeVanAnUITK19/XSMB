@@ -21,6 +21,7 @@ Widget host(Widget child) => MaterialApp(
   supportedLocales: const [Locale('vi', 'VN')],
   theme: ThemeData(
     colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFF01101)),
+    splashFactory: NoSplash.splashFactory,
     useMaterial3: true,
   ),
   home: child,

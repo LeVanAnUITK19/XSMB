@@ -390,15 +390,23 @@ class _CheckTicketDialogState extends State<_CheckTicketDialog> {
           const SizedBox(height: 10),
           DropdownButtonFormField<int>(
             initialValue: _ticketPrice,
+            isExpanded: true,
             decoration: const InputDecoration(
               labelText: 'Mệnh giá trên vé',
               border: OutlineInputBorder(),
             ),
             items: const [
-              DropdownMenuItem(value: 10000, child: Text('10.000đ')),
+              DropdownMenuItem(
+                value: 10000,
+                child: Text('10.000đ', overflow: TextOverflow.ellipsis),
+              ),
               DropdownMenuItem(
                 value: 20000,
-                child: Text('Mệnh giá khác / vé đặc biệt'),
+                child: Text(
+                  'Mệnh giá khác / vé đặc biệt',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
               ),
             ],
             onChanged: (value) {
@@ -408,6 +416,7 @@ class _CheckTicketDialogState extends State<_CheckTicketDialog> {
           const SizedBox(height: 10),
           DropdownButtonFormField<int>(
             initialValue: _seriesCount,
+            isExpanded: true,
             decoration: const InputDecoration(
               labelText: 'Bộ ký hiệu ghi trên vé',
               border: OutlineInputBorder(),
@@ -415,11 +424,19 @@ class _CheckTicketDialogState extends State<_CheckTicketDialog> {
             items: const [
               DropdownMenuItem(
                 value: 15,
-                child: Text('15 ký hiệu (6 ký hiệu trúng ĐB)'),
+                child: Text(
+                  '15 ký hiệu (6 ký hiệu trúng ĐB)',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
               ),
               DropdownMenuItem(
                 value: 20,
-                child: Text('20 ký hiệu (8 ký hiệu trúng ĐB)'),
+                child: Text(
+                  '20 ký hiệu (8 ký hiệu trúng ĐB)',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
               ),
             ],
             onChanged: (value) {
@@ -561,8 +578,9 @@ class _CheckTicketDialogState extends State<_CheckTicketDialog> {
                     ),
                   ),
                   const SizedBox(height: 12),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       const Icon(
                         Icons.location_on,
